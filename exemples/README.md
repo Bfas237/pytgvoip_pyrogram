@@ -7,7 +7,7 @@ Les exemples nécessitent des ajustements (set app_id et app_hash, change de nom
 $ cd example
 $ wget https://github.com/danog/MadelineProto/raw/master/input.raw  # exemple de flux à télécharger
 $ python make_call.py  # ou receive_call.py, alsa.py
-```
+``` 
 
 ### [make_call.py](make_call.py)
 Fait des appels sortants, lit `input.raw` en boucle sur l'appelé et enregistre la voix de l'appelé sur `output.raw`
