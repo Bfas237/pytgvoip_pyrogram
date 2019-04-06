@@ -2,16 +2,16 @@
 
 [![PyPI](https://img.shields.io/pypi/v/pytgvoip_pyrogram.svg?style=flat)](https://pypi.org/project/pytgvoip_pyrogram/)
 
-**Sample usage of [PytgVoIP](https://github.com/bakatrouble/pytgvoip) library with [Pyrogram](https://github.com/bakatrouble/pyrogram)**
+**Exemple d'utilisation de la bibliothèque [PytgVoIP](https://github.com/bakatrouble/pytgvoip) avec [Pyrogram](https://github.com/bakatrouble/pyrogram)**
 
-Hopefully `pytgvoip` support will be [integrated in Pyrogram itself](https://github.com/pyrogram/pyrogram/pull/218), but this repository would still be available as reference even after merge. 
+Espérons que le support de `pytgvoip` sera [intégré à Pyrogram lui - même](https://github.com/pyrogram/pyrogram/pull/218), mais ce référentiel resterait disponible comme référence même après la fusion. 
 
-Detailed `pytgvoip` usage guide is also available [here](https://pytgvoip.readthedocs.io/en/latest/guides/usage.html)  
+`pytgvoip` guide d'utilisation détaillé de pytgvoip est également disponible [Ici](https://pytgvoip.readthedocs.io/en/latest/guides/usage.html)  
 
-[Community](https://t.me/pytgvoip)
+[Communauté](https://t.me/pytgvoip)
 
 ```python
-# making outgoing calls
+ # faire des appels sortants
 from pyrogram import Client
 from tgvoip_pyrogram import VoIPFileStreamService
 
@@ -32,7 +32,7 @@ app.idle()
 ```
 
 ```python
-# accepting incoming calls
+ # accepter les appels entrants
 from pyrogram import Client
 from tgvoip_pyrogram import VoIPFileStreamService, VoIPIncomingFileStreamCall
 
@@ -56,25 +56,26 @@ def handle_call(call: VoIPIncomingFileStreamCall):
 app.idle()
 ```
 
-[More examples](examples/README.md)
+[Plus d'exemples](examples/README.md)
 
-## Requirements
-* Python 3.4 or higher
-* PytgVoIP (listed as dependency)
-* Pyrogram (listed as dependency)
+## Exigences
+* Python 3.4 ou supérieur
+* PytgVoIP (répertorié comme dépendance)
+* Pyrogramme (répertorié comme dépendance)
 
-## Installing
+
+## Installation
 ```pip3 install pytgvoip-pyrogram```
 
 
-## Encoding audio streams
-Streams consumed by `libtgvoip` should be encoded in 16-bit signed PCM audio.
+##  Encodage de flux audio
+Les flux consommés par `libtgvoip` doivent être codés en audio PCM signé 16 bits.
 ```bash
 $ ffmpeg -i input.mp3 -f s16le -ac 1 -ar 48000 -acodec pcm_s16le input.raw  # encode
 $ ffmpeg -f s16le -ac 1 -ar 48000 -acodec pcm_s16le -i output.raw output.mp3  # decode
 ```
 
-## Copyright & License
-* Copyright (C) 2019 [bakatrouble](https://github.com/bakatrouble)
-* Licensed under the terms of the [GNU Lesser General Public License v3 or later (LGPLv3+)](COPYING.lesser)
+## Droits d'auteur et licence
+* Droits d'auteur (C) 2019 [bakatrouble](https://github.com/bakatrouble)
+* Sous licence selon les termes de la [licence publique générale limitée GNU v3 ou ultérieure (LGPLv3 +)](COPYING.lesser)
 
